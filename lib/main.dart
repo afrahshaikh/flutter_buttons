@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_buttons/buttons/elevated_button.dart';
+import 'package:flutter_buttons/buttons/text_button.dart';
 
 void main() {
   runApp(const MyApp());
@@ -38,10 +39,20 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: ElevatedButton(onPressed: (){
-          Navigator.push(context, MaterialPageRoute(builder: (context)=>
-          ElevatedButtons()));
-        }, child: Text('Elevated Buttons'))
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>
+              ElevatedButtons()));
+            }, child: Text('Elevated Buttons')),
+            TextButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>
+              TextButtons()));
+            }, child: Text('Text Buttons'))
+          ],
+        ),
       ),
     );
   }
