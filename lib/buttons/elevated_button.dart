@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_buttons/shared/text_widget_row.dart';
 
 class ElevatedButtons extends StatelessWidget {
   const ElevatedButtons({super.key});
@@ -125,14 +126,4 @@ class ElevatedButtons extends StatelessWidget {
       ),
     );
   }
-}
-
-Widget rowTextButton(String text, Widget child) {
-  return Row(
-    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-    children: [
-      Text('$text -', style: TextStyle(fontSize: 16, color: Colors.black)),
-      SizedBox(width: 200, height: 30, child: child),
-    ],
-  );
 }

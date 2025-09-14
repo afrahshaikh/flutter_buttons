@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_buttons/buttons/elevated_button.dart';
+import 'package:flutter_buttons/shared/text_widget_row.dart';
 
 class IconButtons extends StatelessWidget {
   const IconButtons({super.key});
