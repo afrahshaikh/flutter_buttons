@@ -16,29 +16,46 @@ class IconButtons extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             spacing: 20,
             children: [
-              rowTextButton('Simple Icon Button',
-              IconButton(
-                icon: const Icon(Icons.thumb_up),
-                onPressed: () {},
-              ),
-              ),
-             rowTextButton('Color and size',  IconButton(
-                icon: const Icon(Icons.favorite),
-                color: Colors.red,
-                iconSize: 40,
-                onPressed: () {},
-              ),
-             ),
-             rowTextButton('Tool tip',  IconButton(
-                icon: const Icon(Icons.search),
-                tooltip: "Search",
-                onPressed: () {},
-              ),
-             ),
               rowTextButton(
-               'Disabled Button' , IconButton(
-                  icon: const Icon(Icons.delete),
-                  onPressed: null,
+                'Simple Icon Button',
+                IconButton(icon: const Icon(Icons.thumb_up), onPressed: () {}),
+              ),
+              rowTextButton(
+                'Color and size',
+                IconButton(
+                  icon: const Icon(Icons.favorite),
+                  color: Colors.red,
+                  iconSize: 40,
+                  onPressed: () {},
+                ),
+              ),
+              rowTextButton(
+                'Tool tip',
+                IconButton(
+                  icon: const Icon(Icons.search),
+                  tooltip: "Search",
+                  onPressed: () {},
+                ),
+              ),
+              rowTextButton(
+                'Disabled Button',
+                IconButton(icon: const Icon(Icons.delete), onPressed: null),
+              ),
+              rowTextButton(
+                'Custom BG',
+                Container(
+                  decoration: const BoxDecoration(
+                    color: Colors.blue,
+                    shape: BoxShape.circle,
+                  ),
+                  child: IconButton(
+                    icon: const Icon(
+                      Icons.camera_alt,
+                      color: Colors.white,
+                      size: 15,
+                    ),
+                    onPressed: () {},
+                  ),
                 ),
               ),
             ],
