@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_buttons/buttons/elevated_button.dart';
+import 'package:flutter_buttons/buttons/icon_button.dart';
 import 'package:flutter_buttons/buttons/text_button.dart';
 
 void main() {
@@ -50,7 +51,18 @@ class _MyHomePageState extends State<MyHomePage> {
             TextButton(onPressed: (){
               Navigator.push(context, MaterialPageRoute(builder: (context)=>
               TextButtons()));
-            }, child: Text('Text Buttons'))
+            }, child: Text('Text Buttons')),
+            IconButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>
+              IconButtons()));
+            }, icon: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              spacing: 4,
+              children: [
+                Icon(Icons.safety_check),
+                Text('Icon Buttons'),
+              ],
+            ))
           ],
         ),
       ),
