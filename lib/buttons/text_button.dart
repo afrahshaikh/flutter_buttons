@@ -6,32 +6,34 @@ class TextButtons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Text Buttons')),
+      appBar: AppBar(title: const Text("TextButtons")),
       body: Center(
-        child: TextButton(
-          onPressed: () {
-            ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(
-                duration: Duration(microseconds: 10),
-                content: Text('Button Pressed'),
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Column(
+            spacing: 20,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              TextButton(
+                onPressed: () {},
+                child: const Text("Simple TextButton"),
               ),
-            );
-          },
-          onLongPress: () {
-            ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(
-                duration: Duration(microseconds: 10),
-                content: Text('Button LongPressed'),
+              TextButton(
+                onPressed: () {},
+                style: TextButton.styleFrom(foregroundColor: Colors.blue),
+                child: const Text("Styled TextButton"),
               ),
-            );
-          },
-          autofocus: true,
-          focusNode: FocusNode(),
-          style: TextButton.styleFrom(
-            padding: EdgeInsets.all(16),
-            textStyle: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              TextButton.icon(
+                onPressed: () {},
+                icon: const Icon(Icons.info, color: Colors.red),
+                label: const Text("With Icon"),
+              ),
+              TextButton(
+                onPressed: null,
+                child: const Text("Disabled Button"),
+              ),
+            ],
           ),
-          child: Text("Text Button Click Me"),
         ),
       ),
     );
