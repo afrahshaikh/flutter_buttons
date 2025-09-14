@@ -28,10 +28,7 @@ class TextButtons extends StatelessWidget {
                 icon: const Icon(Icons.info, color: Colors.red),
                 label: const Text("With Icon"),
               ),
-              TextButton(
-                onPressed: null,
-                child: const Text("Disabled Button"),
-              ),
+              TextButton(onPressed: null, child: const Text("Disabled Button")),
             ],
           ),
         ),

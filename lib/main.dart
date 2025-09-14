@@ -31,7 +31,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,25 +43,37 @@ class _MyHomePageState extends State<MyHomePage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ElevatedButton(onPressed: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>
-              ElevatedButtons()));
-            }, child: Text('Elevated Buttons')),
-            TextButton(onPressed: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>
-              TextButtons()));
-            }, child: Text('Text Buttons')),
-            IconButton(onPressed: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>
-              IconButtons()));
-            }, icon: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              spacing: 4,
-              children: [
-                Icon(Icons.safety_check),
-                Text('Icon Buttons'),
-              ],
-            ))
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ElevatedButtons()),
+                );
+              },
+              child: Text('Elevated Buttons'),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => TextButtons()),
+                );
+              },
+              child: Text('Text Buttons'),
+            ),
+            IconButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => IconButtons()),
+                );
+              },
+              icon: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                spacing: 4,
+                children: [Icon(Icons.safety_check), Text('Icon Buttons')],
+              ),
+            ),
           ],
         ),
       ),
