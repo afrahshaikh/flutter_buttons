@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_buttons/buttons/elevated_button.dart';
+import 'package:flutter_buttons/buttons/fab_button.dart';
 import 'package:flutter_buttons/buttons/icon_button.dart';
 import 'package:flutter_buttons/buttons/outlined_button.dart';
 import 'package:flutter_buttons/buttons/text_button.dart';
@@ -75,12 +76,24 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: [Icon(Icons.safety_check), Text('Icon Buttons')],
               ),
             ),
-            OutlinedButton(onPressed: (){
-              Navigator.push(
+            OutlinedButton(
+              onPressed: () {
+                Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => OutlinedButtons()),
                 );
-            }, child: Text('Outlined Buttons'))
+              },
+              child: Text('Outlined Buttons'),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => FabDemo()),
+                );
+              },
+              child: Text('FAB'),
+            ),
           ],
         ),
       ),

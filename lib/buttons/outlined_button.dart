@@ -12,19 +12,16 @@ class OutlinedButtons extends StatelessWidget {
         padding: const EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           spacing: 20,
           children: [
             rowTextButton(
               'Simple Button',
-               OutlinedButton(
-                onPressed: () {},
-                child: const Text("Outlined"),
-              ),
+              OutlinedButton(onPressed: () {}, child: const Text("Outlined")),
             ),
             rowTextButton(
               'Styled',
-               OutlinedButton(
+              OutlinedButton(
                 onPressed: () {},
                 style: OutlinedButton.styleFrom(
                   foregroundColor: Colors.blue,
@@ -34,19 +31,16 @@ class OutlinedButtons extends StatelessWidget {
               ),
             ),
             rowTextButton(
-              'Button with Icon'
-              , OutlinedButton.icon(
+              'Button with Icon',
+              OutlinedButton.icon(
                 onPressed: () {},
                 icon: const Icon(Icons.download, color: Colors.green),
                 label: const Text("Download"),
               ),
             ),
             rowTextButton(
-              'Disabled'
-              , OutlinedButton(
-                onPressed: null,
-                child: const Text("Buy Premium"),
-              ),
+              'Disabled',
+              OutlinedButton(onPressed: null, child: const Text("Buy Premium")),
             ),
           ],
         ),
